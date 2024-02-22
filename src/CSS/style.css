@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply m-0 p-0 box-border;
+    }
+    img,
+    svg {
+        @apply max-w-full;
+    }
+}
+
+@layer components {
+    .container {
+        @apply px-[15px] mx-auto md:w-[750px] lg:w-[970px] xl:w-[1170px] 2xl:w-[1340px];
+    }
+    .image-hero picture {
+        @apply opacity-0 w-full duration-300 h-full absolute xl:opacity-100;
+    }
+    .image-hero picture img {
+        @apply h-full  w-full;
+    }
+    .image-hero picture.prev {
+        @apply -left-full ;
+    }
+    .image-hero picture.next {
+        @apply left-full;
+    }
+    .image-hero picture.active {
+        @apply opacity-100 xl:left-0 visible;
+    }
+    .content {
+        @apply opacity-0 duration-300 hidden;
+    }
+    .content.active {
+        @apply opacity-100 block;
+    }
+    .content h1 {
+        @apply text-[2.5rem] xl:text-5xl font-semibold tracking-[-0.04em] leading-[0.95] mb-6 ;
+    }
+    .content p {
+        @apply word-tighter text-gray-600 leading-[1.33] mb-5;
+    }
+    .content .shop {
+        @apply flex items-center gap-5;
+    }
+    .content .shop a {
+        @apply uppercase block font-bold tracking-[0.7em];
+    }
+    .slide-controls > .disabled {
+        @apply pointer-events-none opacity-50;
+    }
+}
+
+@layer utilities {
+    .word-tighter {
+        word-spacing: -0.07rem;
+    }
+    .custom-grid {
+        grid-template-columns: repeat(10, minmax(0, 140px));
+    }
+}

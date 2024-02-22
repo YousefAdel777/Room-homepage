@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Room homepage</title>
+  <link rel="stylesheet" href="./src/CSS/output.css">
+</head>
+<body class="font-league min-h-[100svh] overflow-x-hidden">
+  <div class="overlay bg-black absolute h-full w-full opacity-60 left-0 z-10 hidden lg:hidden"></div>
+  <header class=" absolute left-0 w-full pt-15 z-10">
+    <div class="container flex flex-row-reverse items-center lg:gap-14 lg:flex-row">
+      <div class="logo flex-1 flex justify-center items-center lg:flex-initial">
+        <img src="./images/logo.svg" alt="Room logo">
+      </div>
+      <img src="./images/icon-hamburger.svg" alt="Menu Icon" class="lg:hidden cursor-pointer menu-icon">
+      <nav class="flex -translate-y-full duration-300 p-8 w-full absolute left-0 bg-white top-0 lg:translate-y-0 lg:p-0 lg:w-auto lg:static lg:bg-transparent">
+        <img src="./images/icon-close.svg" alt="Close Icon" class="lg:hidden cursor-pointer close-icon">
+        <ul class="flex flex-1 items-center justify-end gap-8 lg:justify-end lg:flex-initial">
+          <li class="font-semibold tracking-tight lg:text-white relative after:absolute after:w-0 after:h-1 after:duration-300 after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:bg-white hover:after:w-full"><a href="#" >home</a></li>
+          <li class="font-semibold tracking-tight lg:text-white relative after:absolute after:w-0 after:h-1 after:duration-300 after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:bg-white hover:after:w-full"><a href="#">shop</a></li>
+          <li class="font-semibold tracking-tight lg:text-white relative after:absolute after:w-0 after:h-1 after:duration-300 after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:bg-white hover:after:w-full"><a href="#">about</a></li>
+          <li class="font-semibold tracking-tight lg:text-white relative after:absolute after:w-0 after:h-1 after:duration-300 after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:bg-white hover:after:w-full"><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="grid grid-cols-1 xl:custom-grid 3xl:grid-cols-10">
+    <div class="image-hero relative col-[span_6] min-h-[400px] md:min-h-[700px] overflow-hidden xl:min-h-0">
+      <picture class="active">
+        <source media="(min-width: 768px)" srcset="./images/desktop-image-hero-1.jpg">
+        <img src="./images/mobile-image-hero-1.jpg" alt="Dining table and white chairs image">
+      </picture>
+      <picture class="next">
+        <source media="(min-width: 768px)" srcset="./images/desktop-image-hero-2.jpg">
+        <img src="./images/mobile-image-hero-2.jpg" alt="two white chairs and a yellow chair image">
+      </picture>
+      <picture class="next">
+        <source media="(min-width: 768px)" srcset="./images/desktop-image-hero-3.jpg">
+        <img src="./images/mobile-image-hero-3.jpg" alt="black chair image">
+      </picture>
+    </div>
+    <div class="text col-[span_4] bg-white p-12 relative xl:pb-[9.3rem] xl:pr-12 xl:pl-25 xl:pt-30">
+      <div class="content active">
+        <h1>Discover innovative ways to decorate</h1>
+        <p>
+          We provide unmatched quality, comfort, and style for property owners across the country. 
+          Our experts combine form and function in bringing your vision to life. Create a room in your 
+          own style with our collection and make your property a reflection of you and what you love.
+        </p>
+        <div class="shop">
+          <a href="#">Shop now</a>
+          <img src="./images/icon-arrow.svg" alt="Arrow icon">
+        </div>
+      </div>
+      <div class="content">
+        <h1>We are available all across the globe</h1>
+        <p>
+          With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+          store locator. Any questions? Don't hesitate to contact us today.
+        </p>
+        <div class="shop">
+          <a href="#">Shop now</a>
+          <img src="./images/icon-arrow.svg" alt="Arrow icon">
+        </div>
+      </div>
+      <div class="content">
+        <h1>Manufactured with the best materials</h1>
+        <p>
+          Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+          to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+          experience in this industry, we understand what customers want for their home and office.        
+        </p>
+        <div class="shop">
+          <a href="#">Shop now</a>
+          <img src="./images/icon-arrow.svg" alt="Arrow icon">
+        </div>
+      </div>
+      <div class="slide-controls flex items-center absolute right-0 top-0 -translate-y-full xl:-translate-y-0 xl:right-auto xl:top-auto xl:left-0 xl:bottom-0">
+        <div class="prev-icon cursor-pointer flex justify-center items-center bg-black w-20 h-20 duration-300 hover:bg-gray-800">
+          <img src="./images/icon-angle-left.svg" alt="Next arrow icon">
+        </div>
+        <div class="next-icon cursor-pointer flex justify-center items-center bg-black w-20 h-20 duration-300 hover:bg-gray-800">
+          <img src="./images/icon-angle-right.svg" alt="Previous arrow icon">
+        </div>
+      </div>
+    </div>
+    <div class="about-image col-[span_3]">
+      <img src="./images/image-about-dark.jpg" alt="Dark modern furniture image" class=" w-full h-full xl:w-auto">
+    </div>
+    <div class="about-text col-[span_4] p-12 xl:py-16 xl:pr-4 xl:pl-12">
+      <h2 class="font-bold tracking-[0.42em] uppercase mb-3">About our furniture</h2>
+      <p class="word-tighter text-gray-600 leading-[1.33]">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </p>
+    </div>
+    <div class="about-image col-[span_3] xl:translate-x-5">
+      <img src="./images/image-about-light.jpg" alt="Light modern furniture image" class=" w-full h-full xl:w-auto 2xl:h-auto 2xl:max-w-none">
+    </div>
+  </main>
+  <script src="./src/js/main.js"></script>
+</body>
+</html>
